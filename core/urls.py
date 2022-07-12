@@ -4,5 +4,6 @@ from core import viewsets
 router = DefaultRouter()
 
 router.register('edicoes_come', viewsets.EdicoesComemorativasViewset)
-
+router.register('capas_doe', viewsets.CapasDoeViewset)
+ 
 urlpatterns = router.urls

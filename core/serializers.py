@@ -8,6 +8,6 @@ class EdicoesComemorativasSerializer(serializers.ModelSerializer):
 
 class CapasDoeSerializer(serializers.ModelSerializer):
     class Meta:
-        models = models.CapasDoe
+        model = models.CapasDoe
         fields = '__all__'
 
