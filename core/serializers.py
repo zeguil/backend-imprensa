@@ -11,3 +11,9 @@ class CapasDoeSerializer(serializers.ModelSerializer):
         model = models.CapasDoe
         fields = '__all__'
 
+class LinhatempoIoaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.LinhatempoIoa
+        fields = '__all__'
+
+

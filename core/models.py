@@ -32,3 +32,17 @@ class CapasDoe(models.Model):
         verbose_name = 'Capa Doe'
         verbose_name_plural = 'Capas_Doe'
 
+class LinhatempoIoa(models.Model):
+    ano = models.CharField(max_length=10)
+    descricao = models.CharField(max_length=300)
+    foto =  models.ImageField(
+        upload_to='images/ioa', blank=True, null=True
+    )
+
+    class Meta:
+        managed = True
+        db_table = 'linhatempo_ioa'
+        verbose_name = 'Linha Tempo Ioa'
+        verbose_name_plural = 'Linhas do Tempo Ioa'
+
+
