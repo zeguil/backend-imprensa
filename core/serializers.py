@@ -16,4 +16,21 @@ class LinhatempoIoaSerializer(serializers.ModelSerializer):
         model = models.LinhatempoIoa
         fields = '__all__'
 
+class LinhatempoPresidentesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.LinhatempoPresidentes
+        fields = '__all__'
+
+class AtosRelevantesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.AtosRelevantes
+        fields = '__all__'
+
+class MaquinasdeImpressaoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.MaquinasdeImpressao
+        fields = '__all__'
+
+
+
 
