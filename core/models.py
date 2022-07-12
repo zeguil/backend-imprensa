@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
@@ -36,7 +37,7 @@ class LinhatempoIoa(models.Model):
     ano = models.CharField(max_length=10)
     descricao = models.CharField(max_length=300)
     foto =  models.ImageField(
-        upload_to='images/ioa', blank=True, null=True
+        upload_to='images/timeline_ioa', blank=True, null=True
     )
 
     class Meta:
@@ -45,4 +46,15 @@ class LinhatempoIoa(models.Model):
         verbose_name = 'Linha Tempo Ioa'
         verbose_name_plural = 'Linhas do Tempo Ioa'
 
+class LinhatempoPresidentes(models.Model):
+    ano = models.CharField(max_length=10)
+    descricao = models.CharField(max_length=300)
+    icon = models.ImageField(
+        upload_to='images/timeline_presidentes'
+    )
 
+    class Meta:
+        managed = True
+        db_table = 'linhatempo_presidente'
+        verbose_name = 'Linha Tempo Presidente'
+        verbose_name_plural = 'Linhas do Tempo Presidentes'
