@@ -78,6 +78,6 @@ class MaquinasdeImpressao(models.Model):
     )
     titulo = models.CharField(max_length=50)
     ano = models.CharField(max_length=10)
-    marca = models.CharField(max_length=300)
+    marca = models.CharField(max_length=300, default='', null=True)
     modelo = models.CharField(max_length=100, default='')
     status = models.CharField(max_length=50, default='')
