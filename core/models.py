@@ -33,8 +33,9 @@ class CapasDoe(models.Model):
         verbose_name_plural = 'Capas_Doe'
 
 class LinhatempoIoa(models.Model):
+    titulo = models.CharField(max_length=70, default='', null=True)
     ano = models.CharField(max_length=10)
-    descricao = models.CharField(max_length=300)
+    descricao = models.CharField(max_length=600)
     foto =  models.ImageField(
         upload_to='images/timeline_ioa', blank=True, null=True
     )
@@ -46,6 +47,7 @@ class LinhatempoIoa(models.Model):
         verbose_name_plural = 'Linhasdotempo_Ioa'
 
 class LinhatempoPresidentes(models.Model):
+    nome = models.CharField(max_length=50, default='', null=True)
     ano = models.CharField(max_length=10)
     descricao = models.CharField(max_length=300)
     icon = models.ImageField(
