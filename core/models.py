@@ -19,9 +19,9 @@ class EdicoesComemorativas(models.Model):
 
 
 class CapasDoe(models.Model):
-    titulo = models.CharField(max_length=30)
-    ano = models.CharField(max_length=10)
-    resumo = models.CharField(max_length=250)
+    titulo = models.CharField(max_length=30,  default='', null=True)
+    ano = models.CharField(max_length=30)
+    resumo = models.CharField(max_length=600)
     capa = models.ImageField(
         upload_to='images/capas', blank=True, null=True
     )
