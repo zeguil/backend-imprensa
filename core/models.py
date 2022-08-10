@@ -3,11 +3,19 @@ from django.db import models
 
 # Create your models here.
 class EdicoesComemorativas(models.Model):
-    codigo = models.CharField(max_length=25)
-    resumo = models.CharField(max_length=500)
-    data = models.CharField(max_length=10)
-    referencia = models.CharField(max_length=300)
-    image = models.ImageField(
+    codigo = models.CharField(max_length=25, default='', null=True)
+    titulo = models.CharField(max_length=100, default='', null=True)
+    data = models.CharField(max_length=10, default='', null=True)
+    nome_prod= models.CharField(max_length=300, default='', null=True)
+    procedencia = models.CharField(max_length=600, default='', null=True)
+    resumo = models.CharField(max_length=600, default='', null=True)
+    main_image = models.ImageField(
+        upload_to='images/edicoes', blank=True, null=True
+    )
+    image1  = models.ImageField(
+        upload_to='images/edicoes', blank=True, null=True
+    )
+    image2 = models.ImageField(
         upload_to='images/edicoes', blank=True, null=True
     )
 
@@ -47,9 +55,9 @@ class LinhatempoIoa(models.Model):
         verbose_name_plural = 'Linhasdotempo_Ioa'
 
 class LinhatempoPresidentes(models.Model):
-    nome = models.CharField(max_length=50, default='', null=True)
+    nome = models.CharField(max_length=150, default='', null=True)
     ano = models.CharField(max_length=10)
-    descricao = models.CharField(max_length=300)
+    descricao = models.CharField(max_length=300, default='', null=True)
     icon = models.ImageField(
         upload_to='images/timeline_presidentes', blank=True, null=True
     )
@@ -64,9 +72,9 @@ class AtosRelevantes(models.Model):
     image = models.ImageField(
         upload_to='images/atos_relevantes', blank=True, null=True
     )
-    titulo = models.CharField(max_length=30)
+    titulo = models.CharField(max_length=100)
     descricao = models.CharField(max_length=300)
-    link = models.CharField(max_length=50)
+    link = models.CharField(max_length=300)
 
     class Meta:
         managed = True
