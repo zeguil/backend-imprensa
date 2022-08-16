@@ -4,6 +4,8 @@ from core import viewsets
 router = DefaultRouter()
 
 router.register('edicoes_come', viewsets.EdicoesComemorativasViewset)
+router.register('banner1', viewsets.Banner1Viewset)
+router.register('banner2', viewsets.Banner2Viewset)
 router.register('capas_doe', viewsets.CapasDoeViewset)
 router.register('linhatempo_ioa', viewsets.LinhatempoIoaViewset)
 router.register('linhatempo_presidentes', viewsets.LinhatempoPresidentesViewset)

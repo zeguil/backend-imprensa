@@ -25,6 +25,34 @@ class EdicoesComemorativas(models.Model):
         verbose_name = 'Edicao_Come'
         verbose_name_plural = 'Edicoes_Come'
 
+class Banner1(models.Model):
+    image1  = models.ImageField(
+        upload_to='images/banner1', blank=True, null=True
+    ) 
+    image2  = models.ImageField(
+        upload_to='images/banner1', blank=True, null=True
+    ) 
+    image3  = models.ImageField(
+        upload_to='images/banner1', blank=True, null=True
+    )
+    image4  = models.ImageField(
+        upload_to='images/banner1', blank=True, null=True
+    )
+
+class Banner2(models.Model):
+    image1  = models.ImageField(
+        upload_to='images/banner2', blank=True, null=True
+    )
+    image2  = models.ImageField(
+        upload_to='images/banner2', blank=True, null=True
+    )
+    image3  = models.ImageField(
+        upload_to='images/banner2', blank=True, null=True
+    )
+    image4  = models.ImageField(
+        upload_to='images/banner2', blank=True, null=True
+    ) 
+
 
 class CapasDoe(models.Model):
     titulo = models.CharField(max_length=30,  default='', null=True)

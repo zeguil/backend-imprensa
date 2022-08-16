@@ -6,6 +6,16 @@ class EdicoesComemorativasSerializer(serializers.ModelSerializer):
         model = models.EdicoesComemorativas
         fields = '__all__'
 
+class Banner1Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Banner1
+        fields = '__all__'
+
+class Banner2Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Banner2
+        fields = '__all__'
+
 class CapasDoeSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CapasDoe
