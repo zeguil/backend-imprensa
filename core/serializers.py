@@ -40,6 +40,16 @@ class MaquinasdeImpressaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.MaquinasdeImpressao
         fields = '__all__'
+        
+class DepoimentosServidoresSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.DepoimentosServidores
+        fields = '__all__'
+
+class FotosServidoresSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.FotosServidores
+        fields = '__all__'
 
 
 

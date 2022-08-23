@@ -30,7 +30,6 @@ class Banner1(models.Model):
         upload_to='images/banner1', blank=True, null=True
     ) 
    
-
 class Banner2(models.Model):
     image  = models.ImageField(
         upload_to='images/banner2', blank=True, null=True
@@ -101,3 +100,27 @@ class MaquinasdeImpressao(models.Model):
     marca = models.CharField(max_length=300, default='', null=True)
     modelo = models.CharField(max_length=100, default='')
     status = models.CharField(max_length=50, default='')
+    
+class DepoimentosServidores(models.Model):
+    nome = models.CharField(max_length=100)
+    depoimento = models.CharField(max_length=800)
+    
+    class Meta:
+        managed = True
+        db_table = 'depoimento_servidor'
+        verbose_name = 'Depoimento_Servidor'
+        verbose_name_plural = 'Depoimentos_Servidores'
+
+class FotosServidores(models.Model):
+    foto = models.ImageField(
+        upload_to='images/fotos_servidores', blank=True, null=True
+    )
+    descricao = models.CharField(max_length=500, default='')
+    
+    class Meta:
+        managed = True
+        db_table = 'foto_servidor'
+        verbose_name = 'Foto_Servidor'
+        verbose_name_plural = 'Fotos_Servidores'
+
+    

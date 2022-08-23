@@ -33,4 +33,13 @@ class MaquinasdeImpressaoViewset(viewsets.ModelViewSet):
     queryset = models.MaquinasdeImpressao.objects.all()
     serializer_class = serializers.MaquinasdeImpressaoSerializer
 
+class DepoimentosServidoresViewset(viewsets.ModelViewSet):
+    queryset = models.DepoimentosServidores.objects.all()
+    serializer_class = serializers.DepoimentosServidoresSerializer
+
+class FotosServidoresViewset(viewsets.ModelViewSet):
+    queryset = models.FotosServidores.objects.all()
+    serializer_class = serializers.FotosServidoresSerializer
+
+
 
