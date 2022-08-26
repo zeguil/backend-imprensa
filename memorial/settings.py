@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +25,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['18.228.22.223']
+ALLOWED_HOSTS = [
+    '18.228.22.223',
+    'ec2-18-228-22-223.sa-east-1.compute.amazonaws.com',
+    'localhost',
+    ]
 
 ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
@@ -123,7 +128,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'static'
+STATICFILES_DIRS=[
+    (os.path.dirname(BASE_DIR),"static"),
+]
+STATIC_ROOT = (os.path.dirname(BASE_DIR),"static_files") 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -141,6 +150,8 @@ AWS_LOCATION = config('AWS_LOCATION')
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'http://18.228.22.223',
+    'http://ec2-18-228-22-223.sa-east-1.compute.amazonaws.com',
 ]
 
 # Default primary key field type
