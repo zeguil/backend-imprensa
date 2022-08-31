@@ -27,8 +27,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = [
-    '18.228.22.223',
-    'ec2-18-228-22-223.sa-east-1.compute.amazonaws.com',
+    '15.229.18.159',
+    'ec2-15-229-18-159.sa-east-1.compute.amazonaws.com',
     'localhost',
     ]
 
@@ -146,8 +146,8 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'http://18.228.22.223',
-    'http://ec2-18-228-22-223.sa-east-1.compute.amazonaws.com',
+    'http://15.229.18.159',
+    'http://ec2-15-229-18-159.sa-east-1.compute.amazonaws.com',
 ]
 
 # Default primary key field type
